@@ -20,8 +20,8 @@ export default {
   data: function(){
     return {
       ruleForm: {
-        email: '',
-        password: ''
+        email: '123454321@qq.com',
+        password: '123454321'
       },
       rules: {
         email: [
