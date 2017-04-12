@@ -1,9 +1,5 @@
-# top APP
+# VMS
 > dependency: express  mongoose pm2 logjs4 jade moment supertest mocha...
-
-[![build status](http://gitlab.geekpark.net/geekpark/topApp-backend/badges/master/build.svg)](http://gitlab.geekpark.net/geekpark/topApp-backend/commits/master)
-
-[![coverage report](http://gitlab.geekpark.net/geekpark/topApp-backend/badges/master/coverage.svg)](http://gitlab.geekpark.net/geekpark/topApp-backend/commits/master)
 
 ### 运行
 

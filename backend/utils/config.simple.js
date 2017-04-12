@@ -5,9 +5,9 @@ module.exports = {
   ports:       isDev ? ['3000'] : ['10007'],
   secret:      '*',
   allowOrigin: 'http://127.0.0.1:8080',
-  db:          'mongodb://127.0.0.1:27017/topapp',
-  testdb:      'mongodb://127.0.0.1:27017/topapp-test',
-  sessiondb:   'mongodb://127.0.0.1:27017/topapp-session',
+  db:          'mongodb://127.0.0.1:27017/vms',
+  testdb:      'mongodb://127.0.0.1:27017/vms-test',
+  sessiondb:   'mongodb://127.0.0.1:27017/vms-session',
   qiniu:       {
     bucket: '*',
     ACCESS_KEY: '*',
