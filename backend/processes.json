@@ -29,13 +29,13 @@
     "production" : {
       "user" : "eric",
       "host" :[{
-        "host" : "192.168.2.5",
-        "port": "22"
+        "host" : "45.77.16.126",
+        "port": "333"
       }],
       "ref"  : "origin/master",
-      "repo" : "ssh://git@github.com/ericjj.com/vms.git",
+      "repo" : "https://github.com/ericjjj/vms.git",
       "path" : "/home/eric/vms",
-      "post-deploy" : "yarn install && npm run doc && pm2 startOrRestart processes.json --env production"
+      "post-deploy" : "pwd && yarn install && npm run doc && pm2 startOrRestart processes.json --env production"
     },
     "dev" : {
       "user" : "node",
