@@ -22,10 +22,6 @@ describe('GET ARTICLE',  () => {
     return _get('articles/myArticles', {user: user._id.toString()}, 200);
   });
 
-  it('获取喜欢过的文章, 正确', async () => {
-    return _get('articles/myLikes', {user: user._id.toString()}, 200);
-  });
-
   it('获取评论过的文章, 正确', async () => {
     return _get('articles/myComments', {user: user._id.toString()}, 200);
   });

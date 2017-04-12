@@ -75,6 +75,7 @@
 </template>
 
 <script>
+
 function initialState () {
   return {
     start:             0,
@@ -104,27 +105,27 @@ function initialState () {
       value: 'admin'
     }],
     form: {
-        nickname:   '',
-        company:    '',
-        title:      '',
-        permission: [],
-        summary:    '',
-        sign:       '',
-        intro:      '',
+        nickname:   faker.name.findName(),
+        company:    faker.company.companyName(),
+        title:      faker.name.jobTitle(),
+        permission: ['visitor'],
+        summary:    faker.random.words(),
+        sign:       faker.random.words(),
+        intro:      faker.random.words(),
         _from:      'admin',
         openid:     '0',
         password:   '123456',
         weight:     0,
         wechat:     {
-          number: '',
+          number: faker.internet.email(),
           hidden: false,
         },
         email: {
-          addr:   '',
+          addr:   faker.internet.email(),
           hidden: false,
         },
         phone: {
-          number: '',
+          number: faker.phone.phoneNumber(),
           hidden: false,
         },
       },

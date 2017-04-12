@@ -36,7 +36,7 @@ function addMethods(_this) {
   }
 
   methods.delete = async function (req, res, next) {
-    let documents = await _this.model.delete({ "_id": req.params.id })
+    let documents = await _this.model.delete({ "_id": req.params.id });
     if (documents === -1) $.result(res, 'delete failed');
     else $.result(res, documents);
   }

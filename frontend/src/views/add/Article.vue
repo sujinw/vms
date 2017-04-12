@@ -44,11 +44,11 @@ export default {
       Object.assign(this.$data, this.$options.data());
     },
     onSubmit() {
+
       let _this = this, dispatch = 'ADD_ADMIN_ITEM', editorStatus = this.$store.state.editorStatus;
       let html = this.$store.state.editor.$txt.html(), url = 'article';
       let formatText = this.$store.state.editor.$txt.formatText();
       if (!this.form.title || !html || this.form.status === 'schedule' && this.form.sendAt < Date.now()) {return;}
-
       this.$set(this.form, 'content', html)
 
       if (editorStatus === 'updateArticle') {

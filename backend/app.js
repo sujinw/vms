@@ -51,6 +51,23 @@ app.use((err, req, res, next) => {
   });
 });
 
+const createUser = async ()=> {
+
+  const id = '123454321';
+  const exist = await models.V1.UserModel.find({openid: id});
+  if (exist) {return;}
+  const user = await models.V1.UserModel.create({
+    nickname:   id,
+    openid:     id,
+    email:      {addr: `${id}@qq.com`},
+    password:   id,
+    permission: ['dev'],
+    code:       id,
+  });
+};
+
+createUser();
+
 // routes
 app.use('/api/mobile/v1', routers.v1);
 app.use('/api/admin', routers.admin);

@@ -22,10 +22,6 @@ describe('GET VOTE',  () => {
     return _get('votes/myvotes', {user: user._id.toString()}, 200);
   });
 
-  it('获取喜欢过的投票, 正确', async () => {
-    return _get('votes/myLikes', {user: user._id.toString()}, 200);
-  });
-
   it('获取评论过的投票, 正确', async () => {
     return _get('votes/myComments', {user: user._id.toString()}, 200);
   });

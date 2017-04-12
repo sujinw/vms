@@ -13,7 +13,7 @@ import $    from '../../utils';
 import Base from '../base';
 
 const User = new Base('User', {
-  openid:       { type: String, unique: true},
+  openid:       { type: String},
   sex:          Number,
   weight:       { type: Number, default: 0 },
   language:     String,

@@ -2,7 +2,7 @@ var isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
   isDev:       isDev,
-  ports:       isDev ? ['3000'] : ['10007'],
+  ports:       isDev ? ['3000'] : ['10000'],
   secret:      '*',
   allowOrigin: 'http://127.0.0.1:8080',
   db:          'mongodb://127.0.0.1:27017/vms',

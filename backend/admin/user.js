@@ -19,7 +19,7 @@ const UserAPI   = new Base({
 // 2 创建用户
 // 3 根据用户 id 更新 token, 返回
 UserAPI.methods.create = async function (req, res, next) {
-  const query = Object.assign({}, req.body);
+  const query = Object.assign({code: $.inviteCode()}, req.body);
   let user    = await UserModel.create(query);
   const token = auth.createToken({user: user._id});
   user        = await UserModel.update({_id: user._id}, { token: token })

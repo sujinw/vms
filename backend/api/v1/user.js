@@ -30,4 +30,24 @@ export default {
     $.result(res, exist);
   },
 
+
+  // 验证邀请码
+  verify: async (req, res, next) => {
+
+    let exist = await UserModel.find({
+      openid: req.body.openid,
+      code:   req.body.code
+    });
+
+    if ($.isEmpty(exist)) { return $.result(res, 'not match'); }
+
+    // 如果用户未激活 并且验证码正确, 则登录成功
+    else if (exist.status === -1) {
+      exist = await UserModel.update({
+        _id: exist._id}, { status: 1 });
+      $.result(res, exist);
+    }
+
+  }
+
 }
