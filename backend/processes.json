@@ -35,7 +35,7 @@
       "ref"  : "origin/master",
       "repo" : "https://github.com/ericjjj/vms.git",
       "path" : "/home/eric/vms",
-      "post-deploy" : "pwd && cd frontend && yarn install && npm run build && cd ../backend && yarn install && npm run doc && pm2 startOrRestart processes.json --env production"
+      "post-deploy" : "cd backend && yarn install && npm run doc && pm2 startOrRestart processes.json --env production"
     },
     "dev" : {
       "user" : "node",
